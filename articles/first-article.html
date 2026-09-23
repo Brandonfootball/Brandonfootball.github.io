@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Article Title | The Red Thread</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Georgia, "Times New Roman", serif;
+        color: #171717;
+        background: #ffffff;
+        line-height: 1.75;
+    }
+
+    header {
+        border-bottom: 1px solid #d8d8d8;
+        padding: 28px 6%;
+        background: #ffffff;
+    }
+
+    .site-header {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .brand {
+        text-decoration: none;
+        color: #111111;
+    }
+
+    .brand h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        letter-spacing: 3px;
+        font-weight: 800;
+    }
+
+    .brand p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #777777;
+        margin-top: 4px;
+        letter-spacing: 0.5px;
+    }
+
+    nav {
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: #222222;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    nav a:hover {
+        color: #9b0000;
+    }
+
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 70px 6% 90px;
+    }
+
+    .category {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #9b0000;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+    }
+
+    .article-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: clamp(42px, 6vw, 72px);
+        line-height: 1.05;
+        letter-spacing: -2px;
+        margin-bottom: 22px;
+    }
+
+    .dek {
+        font-size: 22px;
+        line-height: 1.5;
+        color: #555555;
+        max-width: 760px;
+        margin-bottom: 28px;
+    }
+
+    .byline {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        color: #777777;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 28px;
+        margin-bottom: 40px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 420px;
+        background: #eeeeee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 42px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #888888;
+        font-size: 14px;
+    }
+
+    article {
+        font-size: 19px;
+    }
+
+    article p {
+        margin-bottom: 26px;
+    }
+
+    article h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        line-height: 1.2;
+        margin: 55px 0 20px;
+    }
+
+    article h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 23px;
+        line-height: 1.3;
+        margin: 40px 0 16px;
+    }
+
+    .pullquote {
+        border-left: 4px solid #9b0000;
+        padding: 10px 0 10px 26px;
+        margin: 45px 0;
+        font-size: 28px;
+        line-height: 1.35;
+        font-style: italic;
+        color: #333333;
+    }
+
+    .stat-box {
+        background: #f5f5f5;
+        border-top: 3px solid #111111;
+        padding: 25px;
+        margin: 40px 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .stat-box h3 {
+        margin: 0 0 15px;
+        font-size: 17px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .stat-box ul {
+        padding-left: 22px;
+    }
+
+    .article-footer {
+        border-top: 1px solid #dddddd;
+        margin-top: 65px;
+        padding-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        color: #777777;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 25px;
+        text-decoration: none;
+        color: #9b0000;
+        font-weight: 700;
+    }
+
+    footer {
+        border-top: 1px solid #dddddd;
+        padding: 35px 6%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #777777;
+        text-align: center;
+    }
+
+    @media (max-width: 700px) {
+        header {
+            padding: 22px 5%;
+        }
+
+        .site-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        nav {
+            gap: 14px;
+        }
+
+        main {
+            padding: 45px 5% 65px;
+        }
+
+        .article-title {
+            font-size: 42px;
+        }
+
+        .dek {
+            font-size: 19px;
+        }
+
+        .hero-image {
+            height: 260px;
+        }
+
+        article {
+            font-size: 17px;
+        }
+
+        .pullquote {
+            font-size: 23px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<header>
+    <div class="site-header">
+
+```
+    <a href="../index.html" class="brand">
+        <h1>THE RED THREAD</h1>
+        <p>Independent Manchester United reporting & analysis</p>
+    </a>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="#">United</a>
+        <a href="#">Match Reports</a>
+        <a href="#">Tactical</a>
+        <a href="#">Players</a>
+        <a href="#">Opinion</a>
+        <a href="#">Features</a>
+    </nav>
+
+</div>
+```
+
+</header>
+
+<main>
+
+```
+<div class="category">Tactical Analysis</div>
+
+<h1 class="article-title">
+    Article Title Goes Here
+</h1>
+
+<p class="dek">
+    A short sentence or two explaining the central idea of the article and giving the reader a reason to keep reading.
+</p>
+
+<div class="byline">
+    By Brandon Williams &nbsp;·&nbsp; September 23, 2026
+</div>
+
+<div class="hero-image">
+    Featured article image
+</div>
+
+<article>
+
+    <p>
+        This is where the article begins. Your opening paragraph should immediately establish the subject of the piece and give the reader a reason to care.
+    </p>
+
+    <p>
+        The Red Thread is not intended to simply repeat what happened during a Manchester United match. The purpose of an article is to examine why something happened, what it means, and what we can learn from it.
+    </p>
+
+    <h2>First Section Heading</h2>
+
+    <p>
+        This is where the main argument begins to develop. Future articles can use this space for tactical analysis, player analysis, match observations, statistics, reporting, or opinion.
+    </p>
+
+    <p>
+        You can write as many paragraphs as necessary. There is no requirement for every article to follow exactly the same structure.
+    </p>
+
+    <div class="pullquote">
+        “This space can be used for an important line or central idea from the article.”
+    </div>
+
+    <h2>Second Section Heading</h2>
+
+    <p>
+        Continue developing the argument here. Good analysis should connect individual observations to the larger picture rather than simply listing what happened.
+    </p>
+
+    <div class="stat-box">
+        <h3>Key Numbers</h3>
+        <ul>
+            <li>Statistic or data point</li>
+            <li>Statistic or data point</li>
+            <li>Statistic or data point</li>
+        </ul>
+    </div>
+
+    <h2>The Bigger Picture</h2>
+
+    <p>
+        This section can explain what the evidence means for Manchester United going forward.
+    </p>
+
+    <p>
+        The article should ultimately leave the reader with something to think about — a new question, a different interpretation, or a clearer understanding of the football.
+    </p>
+
+    <div class="article-footer">
+        <strong>The Red Thread</strong><br>
+        Independent Manchester United reporting & analysis
+
+        <br>
+
+        <a href="../index.html" class="back-link">
+            ← Back to The Red Thread
+        </a>
+    </div>
+
+</article>
+```
+
+</main>
+
+<footer>
+    © 2026 The Red Thread · Independent Manchester United reporting & analysis
+</footer>
+
+</body>
+</html>
