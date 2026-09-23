@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>The Red Thread | Independent Football Analysis</title>
+    <title>The Red Thread | Independent Manchester United Analysis</title>
 
-    <meta name="description" content="Independent football reporting, analysis, opinion and features.">
+    <meta name="description" content="Independent Manchester United reporting, tactical analysis, player analysis, opinion and features.">
 
     <style>
         * {
@@ -38,7 +38,7 @@
         .top-bar {
             max-width: 1200px;
             margin: auto;
-            padding: 28px 30px 22px;
+            padding: 30px 30px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -46,18 +46,23 @@
 
         .logo {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 30px;
-            font-weight: 800;
-            letter-spacing: -1px;
+            font-size: 34px;
+            font-weight: 900;
+            letter-spacing: -1.5px;
+        }
+
+        .logo span {
+            color: #b5121b;
         }
 
         .tagline {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 12px;
-            color: #bbb;
+            font-size: 11px;
+            color: #aaa;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.8px;
             text-align: right;
+            line-height: 1.7;
         }
 
         nav {
@@ -70,18 +75,18 @@
             padding: 0 30px;
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 32px;
         }
 
         nav a {
             display: block;
             padding: 14px 0;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color: #ddd;
+            color: #ccc;
         }
 
         nav a:hover {
@@ -98,7 +103,7 @@
 
         .section-label {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -110,22 +115,22 @@
 
         .feature {
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 45px;
+            grid-template-columns: 1.45fr 1fr;
+            gap: 50px;
             padding-bottom: 55px;
             border-bottom: 1px solid #ccc;
         }
 
         .feature-image {
-            min-height: 420px;
-            background: #222;
+            min-height: 440px;
+            background: #202020;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #888;
+            color: #777;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 12px;
-            letter-spacing: 1px;
+            font-size: 10px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
         }
 
@@ -134,9 +139,9 @@
         }
 
         .feature h1 {
-            font-size: clamp(38px, 5vw, 64px);
-            line-height: 1.02;
-            letter-spacing: -2px;
+            font-size: clamp(40px, 5vw, 66px);
+            line-height: 1.01;
+            letter-spacing: -2.5px;
             margin-bottom: 22px;
         }
 
@@ -148,7 +153,7 @@
 
         .article-meta {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: #777;
@@ -161,17 +166,17 @@
             color: white;
             padding: 12px 20px;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: bold;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         .read-more:hover {
-            background: #8f0e15;
+            background: #8e0e15;
         }
 
-        /* STORIES */
+        /* LATEST */
 
         .latest {
             padding-top: 50px;
@@ -188,16 +193,17 @@
 
         .latest-header h2 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
+            font-size: 19px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .latest-header span {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 11px;
+            font-size: 10px;
             color: #777;
             text-transform: uppercase;
+            letter-spacing: .5px;
         }
 
         .stories {
@@ -227,7 +233,7 @@
 
         .story h3 {
             font-size: 25px;
-            line-height: 1.15;
+            line-height: 1.12;
             margin-bottom: 10px;
         }
 
@@ -252,7 +258,7 @@
             font-family: Arial, Helvetica, sans-serif;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 18px;
+            font-size: 17px;
         }
 
         .about p {
@@ -265,12 +271,12 @@
 
         footer {
             background: #111;
-            color: #888;
+            color: #777;
             padding: 30px;
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 11px;
-            letter-spacing: .5px;
+            font-size: 10px;
+            letter-spacing: 1px;
         }
 
         /* MOBILE */
@@ -283,11 +289,11 @@
 
             .tagline {
                 text-align: left;
-                margin-top: 8px;
+                margin-top: 9px;
             }
 
             nav ul {
-                gap: 18px;
+                gap: 20px;
                 overflow-x: auto;
             }
 
@@ -317,18 +323,22 @@
 <header>
 
     <div class="top-bar">
-        <div class="logo">THE RED THREAD</div>
+
+        <div class="logo">
+            THE <span>RED</span> THREAD
+        </div>
 
         <div class="tagline">
-            Independent football<br>
+            Independent Manchester United<br>
             reporting & analysis
         </div>
+
     </div>
 
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Manchester United</a></li>
+            <li><a href="#">United</a></li>
             <li><a href="#">Match Reports</a></li>
             <li><a href="#">Tactical</a></li>
             <li><a href="#">Players</a></li>
@@ -383,8 +393,8 @@
     <section class="latest">
 
         <div class="latest-header">
-            <h2>Latest Stories</h2>
-            <span>Independent football coverage</span>
+            <h2>Latest United Stories</h2>
+            <span>The Red Thread</span>
         </div>
 
 
@@ -449,8 +459,8 @@
                 </h3>
 
                 <p>
-                    The human side of football often gets lost beneath
-                    statistics, transfers and expectations.
+                    The human side of Manchester United often gets lost
+                    beneath statistics, transfers and expectations.
                 </p>
 
             </article>
@@ -467,11 +477,11 @@
         <h2>About The Red Thread</h2>
 
         <p>
-            The Red Thread is an independent football publication built
-            around thoughtful reporting, tactical analysis, player
+            The Red Thread is an independent Manchester United publication
+            built around thoughtful reporting, tactical analysis, player
             analysis, opinion and long-form features. The aim is simple:
             look beyond the obvious and find the ideas that connect
-            everything happening on the pitch.
+            everything happening at Old Trafford and beyond.
         </p>
 
     </section>
@@ -480,7 +490,7 @@
 
 
 <footer>
-    THE RED THREAD · INDEPENDENT FOOTBALL PUBLICATION
+    THE RED THREAD · INDEPENDENT MANCHESTER UNITED PUBLICATION
 </footer>
 
 </body>
