@@ -1,1 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>The Red Thread | Independent Football Analysis</title>
+
+    <meta name="description" content="Independent football reporting, analysis, opinion and features.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f7f6f2;
+            color: #171717;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #111;
+            color: white;
+            border-bottom: 4px solid #b5121b;
+        }
+
+        .top-bar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 28px 30px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #bbb;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-align: right;
+        }
+
+        nav {
+            border-top: 1px solid #333;
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 30px;
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            display: block;
+            padding: 14px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #ddd;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 55px 30px 80px;
+        }
+
+        .section-label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #b5121b;
+            margin-bottom: 12px;
+        }
+
+        /* FEATURE */
+
+        .feature {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 45px;
+            padding-bottom: 55px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .feature-image {
+            min-height: 420px;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .feature-content {
+            align-self: center;
+        }
+
+        .feature h1 {
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1.02;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
+        }
+
+        .feature p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .article-meta {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            background: #b5121b;
+            color: white;
+            padding: 12px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .read-more:hover {
+            background: #8f0e15;
+        }
+
+        /* STORIES */
+
+        .latest {
+            padding-top: 50px;
+        }
+
+        .latest-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 3px solid #171717;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .latest-header h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .latest-header span {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #777;
+            text-transform: uppercase;
+        }
+
+        .stories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .story {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 25px;
+        }
+
+        .story-image {
+            height: 210px;
+            background: #ddd;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .story h3 {
+            font-size: 25px;
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+
+        .story p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            margin-top: 70px;
+            padding: 45px;
+            background: #171717;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+        }
+
+        .about h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 18px;
+        }
+
+        .about p {
+            color: #ccc;
+            font-size: 18px;
+            max-width: 700px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111;
+            color: #888;
+            padding: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            letter-spacing: .5px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .top-bar {
+                display: block;
+            }
+
+            .tagline {
+                text-align: left;
+                margin-top: 8px;
+            }
+
+            nav ul {
+                gap: 18px;
+                overflow-x: auto;
+            }
+
+            .feature {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-image {
+                min-height: 280px;
+            }
+
+            .stories {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="top-bar">
+        <div class="logo">THE RED THREAD</div>
+
+        <div class="tagline">
+            Independent football<br>
+            reporting & analysis
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Manchester United</a></li>
+            <li><a href="#">Match Reports</a></li>
+            <li><a href="#">Tactical</a></li>
+            <li><a href="#">Players</a></li>
+            <li><a href="#">Opinion</a></li>
+            <li><a href="#">Features</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <!-- FEATURED STORY -->
+
+    <section class="feature">
+
+        <div class="feature-image">
+            Featured story image
+        </div>
+
+        <div class="feature-content">
+
+            <div class="section-label">
+                Featured Analysis
+            </div>
+
+            <h1>
+                Manchester United's midfield problem isn't what you think
+            </h1>
+
+            <div class="article-meta">
+                Analysis · September 2026 · By Brandon
+            </div>
+
+            <p>
+                Football is rarely decided by one moment. Sometimes the
+                answer is hidden in the spaces between them.
+            </p>
+
+            <a class="read-more" href="#">
+                Read the story →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- LATEST STORIES -->
+
+    <section class="latest">
+
+        <div class="latest-header">
+            <h2>Latest Stories</h2>
+            <span>Independent football coverage</span>
+        </div>
+
+
+        <div class="stories">
+
+            <article class="story">
+
+                <div class="story-image">
+                    Article image
+                </div>
+
+                <div class="section-label">
+                    Match Report
+                </div>
+
+                <h3>
+                    The match was won long before the final whistle
+                </h3>
+
+                <p>
+                    A closer look at the decisions, spaces and moments
+                    that shaped the game.
+                </p>
+
+            </article>
+
+
+            <article class="story">
+
+                <div class="story-image">
+                    Article image
+                </div>
+
+                <div class="section-label">
+                    Tactical
+                </div>
+
+                <h3>
+                    What United's new system is trying to create
+                </h3>
+
+                <p>
+                    Formation tells us where players start. Movement
+                    tells us what a team actually wants to do.
+                </p>
+
+            </article>
+
+
+            <article class="story">
+
+                <div class="story-image">
+                    Article image
+                </div>
+
+                <div class="section-label">
+                    Opinion
+                </div>
+
+                <h3>
+                    We talk about players. We forget about footballers.
+                </h3>
+
+                <p>
+                    The human side of football often gets lost beneath
+                    statistics, transfers and expectations.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="about">
+
+        <h2>About The Red Thread</h2>
+
+        <p>
+            The Red Thread is an independent football publication built
+            around thoughtful reporting, tactical analysis, player
+            analysis, opinion and long-form features. The aim is simple:
+            look beyond the obvious and find the ideas that connect
+            everything happening on the pitch.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+    THE RED THREAD · INDEPENDENT FOOTBALL PUBLICATION
+</footer>
+
+</body>
+</html>
